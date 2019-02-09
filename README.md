@@ -1,7 +1,8 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/edumoran/burger/master/public/assets/img/burger.png"/>
+  <img src="https://raw.githubusercontent.com/edumoran/burger-mysql/master/public/assets/img/burger.png"/>
 </p>
-# Want a Burger?
+
+## Want a Burger?
 
 This is a full-stack app that was built with MySQL, Node, Express, Handlebars and a homemade ORM. This app follows the MVC design pattern by using Node and MySQL to query and route in the app, while Handlebars generates the HTML.
 
