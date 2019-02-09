@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="header">
+        <img class="burger-picture" src="assets/img/burger.png" class="center">
+    </div>
+</div>
+
+<div class="container">
+    <div class="burger-container">
+        <div class="row main">
+            <div class="col-md-6">
+                <h2>Ready-to-eat burgers:</h2><br>
+                {{#each burger_data}}
+                {{#unless this.devoured}}
+                <div class="row burgers">
+                    <div class="col-md-9">
+                        <span>{{this.id}}. {{this.name}}</span>
+                    </div>
+                    <div class="col-md-3">
+                        <form method="POST" action="/burgers/update?_method=PUT" class="button-size">
+                        <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+                        <button class="btn btn-warning" type="submit" style="float:right">Ñam Ñam!</button>
+                        </form>
+                    </div>
+                </div>
+                <hr class="break">
+                {{/unless}}
+                {{/each}}
+            </div>
+            <div class="col-md-6">
+                <h2>Already gone...</h2><br>
+                {{#each burger_data}}
+                {{#if this.devoured}}
+                <div class="row burgers">
+                    <div class="col-md-9">
+                        <span>{{this.id}}. {{this.name}}<span>
+                    </div>
+                </div>
+                <hr class="break">
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="row">
+            <h2>Add a new burger:</h2><br>
+            <div class="col-md-6">
+                <form class="form-inline" action="burgers/create" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="ca" name="name" class="form-control" required>
+                    </div>
+                    <button class="btn btn-warning" type="submit"><i class="fa fa-plus" aria-hidden="true"></i>Queue it!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

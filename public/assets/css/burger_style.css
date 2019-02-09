@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, "Helvetica", sans-serif;
+    color: white !important;
+    background-color: #e85d3d !important;
+}
+
+h2 {
+    font-family: Arial, "Helvetica", sans-serif;
+    color: white !important;
+    margin-top: auto !important;
+    padding: 5px;
+}
+
+p {
+    font-family: Arial, "Helvetica", sans-serif;
+    color: white !important;
+}
+
+.burger-picture {
+    display: block !important;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    height: 300px !important;
+}
+
+.form-control {
+    margin-right: 10px;
+}
